@@ -1,0 +1,87 @@
+body{
+  margin: 0;
+  padding:0;
+}
+*{
+  box-sizing: border-box;
+}
+ul{
+  list-style:none;
+  padding:0 30px;
+}
+.bg{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+}
+#parent1{
+  width: 100%;
+  perspective: 3000px;/*数字越大，3d移动幅度越小，在父元素上设置，inline元素不能设置3d*/
+  display: flex;
+
+}
+    
+#banner1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:100vh;
+  border-radius:10px;
+  background-color: black;
+  position:relative;
+  box-shadow: 0px 0px 10px 0px hsla(0,0%,0%,0.5);
+
+}
+
+.content{}
+
+.eyes{
+  display:flex;
+  margin-top:10px;
+}
+.eye-3d{
+  width: 200px;
+  height: 250px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transition: transform 1s;/*3d眼睛每转换角度一次的间隔时间*/
+  border-radius: 50%;
+  margin:100px;
+  
+}
+img{
+  width:50px;
+  height:50px;
+}
+
+.child{
+  position: absolute;
+  border-radius: 50%;
+}
+
+.child:nth-child(1){
+  background: red;
+  width: 100px;
+  height: 100px;
+  transform: translateZ(40px);
+}
+.child:nth-child(2){
+  background: #04060A;
+  width: 50px;
+  height: 50px;
+  transform: translateZ(70px);
+}
+.child:nth-child(3){
+  width: 25px;
+  height: 25px;
+  background: white;
+  transform: translateZ(100px);
+  opacity: 1;
+}
+
